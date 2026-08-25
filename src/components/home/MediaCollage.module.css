@@ -1,0 +1,92 @@
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .gridContainer {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 240px;
+  }
+}
+
+.tile {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.3, 1),
+              box-shadow 0.4s ease,
+              border-color 0.4s ease;
+  min-height: 220px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.tile:hover {
+  transform: translateY(-4px) scale(1.02);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+}
+
+/* Masonry Spans */
+@media (min-width: 960px) {
+  .tall {
+    grid-row: span 2;
+  }
+
+  .wide {
+    grid-column: span 2;
+  }
+
+  .square {
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+}
+
+.texture {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1), transparent 60%);
+  opacity: 0.6;
+  transition: opacity 0.4s ease;
+}
+
+.tile:hover .texture {
+  opacity: 1;
+}
+
+.playIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.tile:hover .playIcon {
+  transform: translate(-50%, -50%) scale(1.15);
+  background: #FFFFFF;
+  color: #0A0A0A;
+}

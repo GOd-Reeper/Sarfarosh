@@ -1,0 +1,51 @@
+.section {
+  width: 100%;
+  position: relative;
+}
+
+/* ── Padding Variants ── */
+.padding_default {
+  padding-top: var(--space-section);
+  padding-bottom: var(--space-section);
+}
+
+.padding_small {
+  padding-top: var(--space-3xl);
+  padding-bottom: var(--space-3xl);
+}
+
+.padding_large {
+  padding-top: calc(var(--space-section) * 1.25);
+  padding-bottom: calc(var(--space-section) * 1.25);
+}
+
+.padding_none {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* ── Background Variants ── */
+.primary {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.secondary {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.tertiary {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-inverse);
+}
+
+.black {
+  background-color: var(--bg-black);
+  color: var(--text-inverse);
+}

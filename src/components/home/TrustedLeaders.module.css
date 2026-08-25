@@ -1,0 +1,167 @@
+.section {
+  position: relative;
+  overflow: hidden;
+}
+
+.cloudContainer {
+  position: relative;
+  min-height: 540px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 32px;
+}
+
+/* ── Grid Background Lines ── */
+.gridLines {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  opacity: 0.12;
+}
+
+.line {
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent 0%, #1A1A1A 20%, #1A1A1A 80%, transparent 100%);
+}
+
+/* ── Floating Avatars Wrapper ── */
+.avatarsWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 340px;
+  pointer-events: none;
+}
+
+@media (max-width: 899px) {
+  .avatarsWrapper {
+    display: none;
+  }
+}
+
+.avatarCard {
+  position: absolute;
+  width: 100px;
+  height: 120px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 10px;
+  color: #FFFFFF;
+  transition: transform 0.4s ease;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.avatarCard:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.avatarPattern {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.7) 100%);
+}
+
+.avatarInfo {
+  position: relative;
+  z-index: 2;
+}
+
+.avatarInitials {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.avatarName {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  line-height: 1.1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.avatarRole {
+  font-size: 0.5625rem;
+  color: rgba(255, 255, 255, 0.7);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Positions matching reference columns */
+.col1 { left: 4%; }
+.col2 { left: 16%; }
+.col3 { left: 28%; }
+.col4 { right: 28%; }
+.col5 { right: 16%; }
+.col6 { right: 4%; }
+
+.top { top: 10px; }
+.bottom { top: 150px; }
+
+/* ── Center Content ── */
+.centerContent {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+  padding-top: 140px;
+}
+
+@media (max-width: 899px) {
+  .centerContent {
+    padding-top: 20px;
+  }
+}
+
+.pillTag {
+  margin-bottom: 16px;
+}
+
+.heading {
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.headingMuted {
+  color: var(--text-muted);
+}
+
+.sub {
+  font-size: var(--fs-body);
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 28px;
+  max-width: 480px;
+}

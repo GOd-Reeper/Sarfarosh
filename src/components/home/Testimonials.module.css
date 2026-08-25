@@ -1,0 +1,354 @@
+.sectionOverride {
+  padding: var(--space-xl) 0;
+}
+
+/* ── Single Master Grand White Card Container (Image 3 exact reference) ── */
+.masterCard {
+  background-color: #FFFFFF;
+  border-radius: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.04), 0 4px 16px rgba(0, 0, 0, 0.02);
+  padding: 48px 24px;
+  position: relative;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .masterCard {
+    padding: 64px 48px;
+  }
+}
+
+/* ── TOP HERO: Avatar Cloud Header ── */
+.avatarCloudHero {
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 56px;
+}
+
+.avatarsTrack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 240px;
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .avatarsTrack {
+    display: none;
+  }
+}
+
+.avatarItem {
+  position: absolute;
+  width: 96px;
+  height: 116px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 10px;
+  color: #FFFFFF;
+  pointer-events: auto;
+  cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.avatarItem:hover {
+  transform: translateY(-6px) scale(1.06);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+  z-index: 10;
+}
+
+.avatarSilhoutte {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 35%, rgba(255, 255, 255, 0.25), transparent 70%);
+}
+
+.avatarOverlay {
+  position: relative;
+  z-index: 2;
+}
+
+.avatarName {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.avatarRole {
+  font-size: 0.5625rem;
+  color: rgba(255, 255, 255, 0.7);
+  white-space: nowrap;
+}
+
+/* Staggered Column Positions matching Image 3 */
+.c1 { left: 2%; }
+.c2 { left: 17%; }
+.c3 { left: 32%; }
+.c4 { right: 32%; }
+.c5 { right: 17%; }
+.c6 { right: 2%; }
+
+.t1 { top: 0px; }
+.t2 { top: 100px; }
+
+/* Center Hero Content */
+.centerHeroContent {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+@media (max-width: 767px) {
+  .centerHeroContent {
+    padding-top: 0;
+  }
+}
+
+.heroPill {
+  margin-bottom: 16px;
+}
+
+.heroHeading {
+  font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+}
+
+.heroHeadingMuted {
+  color: #8A8A8A;
+}
+
+.heroSub {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  max-width: 440px;
+}
+
+.heroCta {
+  display: flex;
+  justify-content: center;
+}
+
+/* ── Section Divider ── */
+.sectionDivider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.08), transparent);
+  margin-bottom: 48px;
+}
+
+/* ── BOTTOM BENTO: What They're Saying ── */
+.bentoSection {
+  width: 100%;
+}
+
+.bentoHeader {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.bentoTag {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.bentoTitle {
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.bentoGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 640px) {
+  .bentoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .bentoGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Quote Cards inside White Master Container */
+.quoteCard {
+  background-color: #F6F6F2;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 24px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.quoteCard:hover {
+  background-color: #F0F0EA;
+  border-color: rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.quoteHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--text-primary);
+  color: var(--text-inverse);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.authorName {
+  font-size: 0.84375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.authorRole {
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+  line-height: 1.2;
+  margin-top: 2px;
+}
+
+.quoteMark {
+  margin-left: auto;
+  font-size: 2rem;
+  color: #CCCCCC;
+  font-family: Georgia, serif;
+  line-height: 0.5;
+  user-select: none;
+}
+
+.quoteText {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Featured Video Spotlight Cards inside Bento */
+.spotlightCard {
+  border-radius: 24px;
+  padding: 22px;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: transform var(--transition-base);
+}
+
+.spotlightCard:hover {
+  transform: translateY(-3px);
+}
+
+.playCircle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+}
+
+.spotlightFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.spotlightLogo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.logoSquare {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  color: #0A0A0A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.625rem;
+  font-weight: 700;
+}
+
+.spotlightTitle {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #FFFFFF;
+  letter-spacing: -0.01em;
+}
