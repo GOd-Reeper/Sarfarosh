@@ -10,3 +10,7 @@
 .wide {
   max-width: var(--max-width-wide);
 }
+
+.narrow {
+  max-width: 960px;
+}
